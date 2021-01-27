@@ -29,20 +29,34 @@ namespace hierarchical_tag
         /// </summary>
         private void InitializeComponent()
         {
+            this.label_test = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // label_test
+            // 
+            this.label_test.AutoSize = true;
+            this.label_test.Location = new System.Drawing.Point(226, 191);
+            this.label_test.Name = "label_test";
+            this.label_test.Size = new System.Drawing.Size(83, 30);
+            this.label_test.TabIndex = 0;
+            this.label_test.Text = "label1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 708);
+            this.Controls.Add(this.label_test);
             this.Name = "Form1";
             this.Text = "Hierarchical Tagging File System";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label_test;
     }
 }
 

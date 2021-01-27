@@ -1,0 +1,10 @@
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\bin\Debug\hierarchical-tag.exe.config
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\bin\Debug\hierarchical-tag.exe
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\bin\Debug\hierarchical-tag.pdb
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical-tag.csprojAssemblyReference.cache
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical_tag.Form1.resources
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical_tag.Properties.Resources.resources
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical-tag.csproj.GenerateResource.cache
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical-tag.csproj.CoreCompileInputs.cache
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical-tag.exe
+C:\Users\htf\GoogleDrive\01-Projects\hierarchical-tag\vs\hierarchical-tag\hierarchical-tag\obj\Debug\hierarchical-tag.pdb
