@@ -24,12 +24,12 @@ namespace hierarchical_tag
             IXmlHandler xml = new XmlHandler();
             var data = xml.Read(TagsXmlFilePath + TagsXmlFileName);
 
-            string showText = $"{data.Count}\n" +
-                              $"{data.Item(1).SelectSingleNode("name").InnerText}\n" +
-                              $"{data.Item(1).SelectSingleNode("type").InnerText}\n" +
-                              $"{data.Item(1).SelectSingleNode("base").InnerText}\n" +
-                              $"{data.Item(1).SelectSingleNode("color").SelectSingleNode("font").InnerText}\n"+
-                              $"{data.Item(1).SelectSingleNode("color").SelectSingleNode("background").InnerText}\n";
+            string showText = $"{data.Count}\n\n" +
+                              $"{data[2].Name}\n" +
+                              $"{data[2].Type}\n" +
+                              $"{data[2].Base}\n" +
+                              $"{data[2].FontColor}\n"+
+                              $"{data[2].BackgroundColor}\n";
 
             label_test.Text = showText;
         }

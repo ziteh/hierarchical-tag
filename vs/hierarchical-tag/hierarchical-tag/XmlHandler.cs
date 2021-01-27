@@ -20,30 +20,64 @@ namespace hierarchical_tag
 
     interface IXmlHandler
     {
-        XmlNodeList Read(string path);
+        List<FileTag> Read(string path);
         void Write(FileTag fileTag);
     }
 
     class XmlHandler : IXmlHandler
     {
-        public XmlNodeList Read(string path)
+        public List<FileTag> Read(string path)
         {
             XmlDocument xmlDoc = new XmlDocument();
             StreamReader sr = new StreamReader(path);
 
             xmlDoc.LoadXml(sr.ReadToEnd());
             XmlNodeList xmlNodeList = xmlDoc.SelectNodes("/root/tag");
+            List<FileTag> fileTags = new List<FileTag>();
 
             foreach (XmlNode node in xmlNodeList)
             {
-                var tagName = node.SelectSingleNode("name").InnerText;
-                var tagType = node.SelectSingleNode("type").InnerText;
-                var tagBase = node.SelectSingleNode("base").InnerText;
-                var tagFontColor = node.SelectSingleNode("color").SelectSingleNode("font").InnerText;
-                var tagBackgroundColor = node.SelectSingleNode("color").SelectSingleNode("background").InnerText;
+                FileTag fileTag = new FileTag
+                {
+                    Name = node.SelectSingleNode("name").InnerText.Trim(),
+                    Type = node.SelectSingleNode("type").InnerText.Trim(),
+                    Base = node.SelectSingleNode("base").InnerText.Trim()
+                };
+
+                if (String.IsNullOrEmpty(fileTag.Type))
+                {
+                    fileTag.Type = "normal";
+                }
+
+                if (String.IsNullOrEmpty(fileTag.Base))
+                {
+                    fileTag.Base = "root";
+                }
+
+                try
+                {
+                   fileTag.FontColor = ColorTranslator.FromHtml(
+                        "#" + node.SelectSingleNode("color").SelectSingleNode("font").InnerText.Trim());
+                }
+                catch
+                {
+                    fileTag.FontColor = Color.Black;
+                }
+
+                try
+                {
+                    fileTag.BackgroundColor = ColorTranslator.FromHtml(
+                         "#" + node.SelectSingleNode("color").SelectSingleNode("background").InnerText.Trim());
+                }
+                catch
+                {
+                    fileTag.BackgroundColor = Color.White;
+                }
+
+                fileTags.Add(fileTag);
             }
 
-            return xmlNodeList;
+            return fileTags;
         }
 
         public void Write(FileTag fileTag)
