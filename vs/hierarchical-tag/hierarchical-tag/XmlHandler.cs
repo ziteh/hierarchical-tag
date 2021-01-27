@@ -20,13 +20,23 @@ namespace hierarchical_tag
 
     interface IXmlHandler
     {
-        List<FileTag> Read(string xmlContent);
-        void Write(FileTag fileTag);
+        /// <summary>
+        /// 解析 XML 內容。
+        /// </summary>
+        /// <param name="xmlContent"></param>
+        /// <returns></returns>
+        List<FileTag> Parse(string xmlContent);
+
+        /// <summary>
+        /// 反解析 XML 內容。
+        /// </summary>
+        /// <param name="fileTag"></param>
+        string Unparse(FileTag fileTag);
     }
 
     class XmlHandler : IXmlHandler
     {
-        public List<FileTag> Read(string xmlContent)
+        public List<FileTag> Parse(string xmlContent)
         {
             XmlDocument xmlDoc = new XmlDocument();
 
@@ -79,8 +89,9 @@ namespace hierarchical_tag
             return fileTags;
         }
 
-        public void Write(FileTag fileTag)
+        public string Unparse(FileTag fileTag)
         {
+            return "";
         }
     }
 }

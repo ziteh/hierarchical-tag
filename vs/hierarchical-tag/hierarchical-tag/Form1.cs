@@ -23,7 +23,7 @@ namespace hierarchical_tag
 
             StreamReader sr = new StreamReader(TagsXmlFilePath + TagsXmlFileName);
             IXmlHandler xml = new XmlHandler();
-            var data = xml.Read(sr.ReadToEnd());
+            var data = xml.Parse(sr.ReadToEnd());
 
             string showText = $"{data.Count}\n\n" +
                               $"{data[2].Name}\n" +
