@@ -37,7 +37,7 @@ namespace hierarchical_tag
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 708);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Hierarchical Tagging File System";
             this.ResumeLayout(false);
 
         }
