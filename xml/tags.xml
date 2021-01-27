@@ -23,7 +23,7 @@
     <type>normal</type>
     <base>B</base>
     <color>
-      <font>FFFFFF</font>
+      <font>FF0000</font>
       <background>000000</background>
     </color>
   </tag>
@@ -33,7 +33,7 @@
     <base>B</base>
     <color>
       <font>FFFFFF</font>
-      <background>000000</background>
+      <background>0000FF</background>
     </color>
   </tag>
   <tag>
