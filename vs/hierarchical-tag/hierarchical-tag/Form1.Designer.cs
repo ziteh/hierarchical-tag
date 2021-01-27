@@ -35,7 +35,7 @@ namespace hierarchical_tag
             // label_test
             // 
             this.label_test.AutoSize = true;
-            this.label_test.Location = new System.Drawing.Point(226, 191);
+            this.label_test.Location = new System.Drawing.Point(69, 56);
             this.label_test.Name = "label_test";
             this.label_test.Size = new System.Drawing.Size(83, 30);
             this.label_test.TabIndex = 0;

@@ -21,8 +21,9 @@ namespace hierarchical_tag
         {
             InitializeComponent();
 
+            StreamReader sr = new StreamReader(TagsXmlFilePath + TagsXmlFileName);
             IXmlHandler xml = new XmlHandler();
-            var data = xml.Read(TagsXmlFilePath + TagsXmlFileName);
+            var data = xml.Read(sr.ReadToEnd());
 
             string showText = $"{data.Count}\n\n" +
                               $"{data[2].Name}\n" +

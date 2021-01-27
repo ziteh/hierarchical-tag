@@ -20,18 +20,17 @@ namespace hierarchical_tag
 
     interface IXmlHandler
     {
-        List<FileTag> Read(string path);
+        List<FileTag> Read(string xmlContent);
         void Write(FileTag fileTag);
     }
 
     class XmlHandler : IXmlHandler
     {
-        public List<FileTag> Read(string path)
+        public List<FileTag> Read(string xmlContent)
         {
             XmlDocument xmlDoc = new XmlDocument();
-            StreamReader sr = new StreamReader(path);
 
-            xmlDoc.LoadXml(sr.ReadToEnd());
+            xmlDoc.LoadXml(xmlContent);
             XmlNodeList xmlNodeList = xmlDoc.SelectNodes("/root/tag");
             List<FileTag> fileTags = new List<FileTag>();
 
